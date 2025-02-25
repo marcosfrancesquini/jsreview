@@ -1,0 +1,25 @@
+    /* Estilos para o contêiner que irá centralizar a section */
+#container {
+    display: flex; /* Ativa o flexbox para facilitar a centralização */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura da viewport */
+  }
+  
+  /* Estilos para a section que atua como um card */
+  section {
+    border: 2px solid #333; /* Define uma borda de 2 pixels com cor cinza escuro */
+    border-radius: 8px; /* Arredonda os cantos do card */
+    padding: 15px; /* Espaço interno para o conteúdo do card */
+    background-color: #fff; /* Cor de fundo do card, geralmente branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    width: 300px; /* Define uma largura fixa para o card, ajuste conforme necessário */
+    /* height pode ser definida se você quiser uma altura fixa */
+  }
+  
+  /* Se você quiser que o card tenha uma altura mínima, por exemplo */
+  section {
+    min-height: 200px; /* Altura mínima do card, ajuste conforme necessário */
+  }
+  
