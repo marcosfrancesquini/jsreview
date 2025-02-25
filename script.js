@@ -11,14 +11,28 @@ let mensagemErro = document.getElementById('mensagemErro');
 const btnRegistrar = document.getElementById('btnRegistrar');
 
 btnRegistrar.addEventListener('click', function (event) {
+
+
     // letraMaiuscula(test)
     event.preventDefault();
+      for(let i = 3; i > 0; i++)
+        mensagemErro.innerHTML("       ");
+    });
     const senha = document.getElementById('password').value;
     const confirmaSenha = document.getElementById('confirmaSenha').value;
     if (senha !== confirmaSenha) {
-        document.getElementById('mensagemErro').innerText = 'As senhas não coincidem!';
-    } else {        
-        document.getElementById('mensagemErro').innerText = '';
+        erros.push('As senhas não coincidem');        
+    } 
+    if (senha.length < 6 || senha.length > 8) {
+        erros.push('A senha tem que estar entre 6 e 8 caracteres.');
     }
+
+    erros.forEach(erro => {
+        const mensagemErroElement = document.createElement('h6');
+        mensagemErroElement.textContent = erro;
+        mensagemErro.appendChild(mensagemErroElement);
+    });
+    //document.getElementById('mensagemErro').innerText = erros;
+   
 });
 
