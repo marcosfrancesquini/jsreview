@@ -1,25 +1,80 @@
-    /* Estilos para o contêiner que irá centralizar a section */
+/* Estilos para o contêiner que irá centralizar a section */
 #container {
-    display: flex; /* Ativa o flexbox para facilitar a centralização */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
-    width: 100%; /* Garante que o contêiner ocupe toda a largura da viewport */
-  }
-  
-  /* Estilos para a section que atua como um card */
-  section {
-    border: 2px solid #333; /* Define uma borda de 2 pixels com cor cinza escuro */
-    border-radius: 8px; /* Arredonda os cantos do card */
-    padding: 15px; /* Espaço interno para o conteúdo do card */
-    background-color: #fff; /* Cor de fundo do card, geralmente branco */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-    width: 300px; /* Define uma largura fixa para o card, ajuste conforme necessário */
-    /* height pode ser definida se você quiser uma altura fixa */
-  }
-  
-  /* Se você quiser que o card tenha uma altura mínima, por exemplo */
-  section {
-    min-height: 200px; /* Altura mínima do card, ajuste conforme necessário */
-  }
-  
+  display: flex; /* Ativa o flexbox para facilitar a centralização */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  width: 100%; /* Ocupa toda a largura da viewport */
+  background-color: #f7f7f7; /* Cor de fundo suave para o contêiner principal */
+}
+
+/* Estilos para a section que atua como um card de login */
+section {
+  background-color: #ffffff; /* Cor de fundo limpa e moderna */
+  border-radius: 12px; /* Cantos mais arredondados para um visual moderno */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+  padding: 20px; /* Espaçamento interno aumentado para melhor legibilidade */
+  width: 350px; /* Ajuste a largura conforme necessário */
+  min-height: 400px; /* Altura mínima para garantir espaço */
+  display: flex;
+  flex-direction: column; /* Utiliza flexbox para organizar os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos filhos */
+}
+
+/* Estilo para o formulário e botão */
+form {
+  width: 100%;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007BFF;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para a mensagem de erro */
+#mensagemErro {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #ffebee;
+  color: #795548;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilo para o h6 dentro da mensagem de erro */
+#mensagemErro h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Adiciona uma animação suave ao carregar a página */
+body {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
