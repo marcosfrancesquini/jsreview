@@ -19,22 +19,38 @@ section {
   display: flex;
   flex-direction: column; /* Utiliza flexbox para organizar os elementos verticalmente */
   align-items: center; /* Centraliza os elementos filhos */
+  margin: 0 auto; /* Centraliza o card na viewport */
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
 }
 
-/* Estilo para o formulário e botão */
+/* Estilos para o contêiner dos inputs */
 form {
   width: 100%;
+  display: flex;
+  flex-direction: column; /* Organiza os inputs em coluna */
+  align-items: center; /* Centraliza os inputs horizontalmente */
 }
 
-input[type="password"] {
+/* Estilo para os inputs de senha e outros inputs */
+input[type="password"], input[type="text"], input[type="email"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   font-size: 16px;
+  text-align: center; /* Centraliza o texto dentro do input */
 }
 
+/* Estilo para os labels de senha e confirmar senha */
+label[for="password"], label[for="confirmPassword"] {
+  font-family: 'Arial', sans-serif; /* Altera a fonte para algo mais atrativo */
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Torna o texto mais destacado */
+  margin-bottom: 5px; /* Adiciona um pouco de espaço antes dos inputs */
+}
+
+/* Estilo para o botão */
 button {
   width: 100%;
   padding: 10px;
@@ -51,25 +67,25 @@ button:hover {
   background-color: #0056b3; /* Cor mais escura ao passar o mouse */
 }
 
-/* Estilo para a mensagem de erro */
+/* Estilo para a mensagem de erro dentro do card */
+/* Estilo para a mensagem de erro dentro do card */
 #mensagemErro {
-  margin-top: 15px;
+  margin: 10px 0; /* Espaço acima e abaixo da mensagem */
   padding: 10px;
   border-radius: 6px;
   background-color: #ffebee;
   color: #795548;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  width: 100%;
+  width: 100%; /* Ocupa toda a largura do card */
+  display: none; /* Inicialmente oculto */
+  transition: display 0.3s, opacity 0.3s; /* Transição suave ao mostrar/esconder */
+  opacity: 0; /* Inicialmente transparente */
 }
 
-/* Estilo para o h6 dentro da mensagem de erro */
-#mensagemErro h6 {
-  margin: 0;
-  padding: 0;
-}
 
-/* Adiciona uma animação suave ao carregar a página */
+/* Animação de fade in para o body */
 body {
   animation: fadeIn 2s;
 }
